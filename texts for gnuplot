@@ -1,0 +1,27 @@
+//system("install-pkg gnuplot-nox");
+//system("gnuplot-nox");
+
+set terminal svg size 400,300 enhanced fname 'arial' fsize 10 butt solid
+set output 'hist_txt output.svg'
+plot "hist.txt" using 1:2 smooth freq with boxes
+
+
+set terminal svg size 400,300 enhanced fname 'arial' fsize 10 butt solid
+set output 'histpoi_txt output.svg'
+plot "./histpoi.txt" using 1:2, "./histpoi.txt" using 1:3 smooth freq with boxes
+
+
+
+Exercise 3 plotting
+set terminal svg size 400,300 enhanced fname 'arial' fsize 10 butt solid
+set output 'likelihood.svg'
+plot [0:6] "likelihood.txt" with lines
+
+set terminal svg size 400,300 enhanced fname 'arial' fsize 10 butt solid
+set output 'nll.svg'
+plot "nll.txt" with lines
+
+set terminal svg size 400,300 enhanced fname 'arial' fsize 10 butt solid
+set output 'deltanll.svg'
+plot [0:7] [-100:700] "deltanll.txt" with lines
+plot [3:3.2] [-5:5] "deltanll.txt" with lines
