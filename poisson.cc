@@ -32,7 +32,7 @@ int main() {
   ofstream fout("hist.txt");
 
   for (int k = 0 ; k < counter . size () ; ++ k ) {
-    //cout << k << ":" << counter [k] << std::endl;
+    cout << k << ":" << counter [k] << std::endl;
     fout << k << " " << counter [k] << endl;
   }
 
@@ -47,8 +47,8 @@ int main() {
     fin1 >> k >> counter[k];
   
     P = poisson (3.11538,k);
-    fout1 << k << " " << counter[k] << " " << k*P << endl;
-    cout  << k << " " << counter[k] << " " << k*P << endl;
+    fout1 << k << " " << counter[k] << " " << N*P << endl;
+    //cout  << k << " " << counter[k] << " " << k*P << endl;
   }
 
   fin1.close();

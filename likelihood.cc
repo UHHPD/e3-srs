@@ -52,7 +52,7 @@ int k, ndof;
   ofstream fout2("deltanll.txt");
   ofstream fout3("random check.txt");
   
-  for (float i=0; i<=6.0; i+=(0.1)) {
+  for (double i=0; i<=6.0; i+=(0.1)) {
     L = prob(daten,i);
     nl = -2*log(L);
     Nll = ((-2*log(L)) - (-2*log(L_mean)));
@@ -63,7 +63,7 @@ int k, ndof;
 
   }
   
-  for (float i=0; i<=6.0; i+=(0.0001)) {
+  for (double i=0; i<=6.0; i+=(0.1)) {
     L = prob(daten,i);
     nl = -2*log(L);
     Nll = ((-2*log(L)) - (-2*log(L_mean)));
@@ -79,7 +79,7 @@ int k, ndof;
 
   }
   int j=0;
-  for (float i=0; i<=6.0; i+=(0.01)) {
+  for (double i=0; i<=6.0; i+=(0.01)) {
     L = prob(daten,i);
     nl = -2*log(L);
     Nll = ((-2*log(L)) - (-2*log(L_mean)));
